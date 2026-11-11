@@ -1,0 +1,19 @@
+provider: descartes
+apis_io: https://apis.io/providers/descartes/
+context: freight
+generated: '2026-11-11'
+concepts:
+  load:
+    path_segment:
+    - load
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/descartes-macropoint-capacity-openapi.yml#POST /api/v2/Load
+  freight_carrier:
+    path_segment:
+    - carrier
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/descartes-macropoint-capacity-openapi.yml#POST /api/v2/Carrier

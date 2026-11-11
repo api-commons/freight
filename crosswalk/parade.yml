@@ -1,0 +1,20 @@
+provider: parade
+apis_io: https://apis.io/providers/parade/
+context: freight
+generated: '2026-11-11'
+concepts:
+  load:
+    path_segment:
+    - loads
+    properties:
+      commodity: commodity
+      weight: weight
+      created_at: created_at
+      equipment_type: equipment
+      stops: stops
+      updated_at: updated_at
+      distance: distance
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/parade-digital-transactions-openapi.yaml#GET /ls/syndication/loads/{external_posting_id}
+    - openapi/_original/parade-load-sync-openapi.yaml#GET /syndication/loads

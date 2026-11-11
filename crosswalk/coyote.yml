@@ -1,0 +1,13 @@
+provider: coyote
+apis_io: https://apis.io/providers/coyote/
+context: freight
+generated: '2026-11-11'
+concepts:
+  load:
+    path_segment:
+    - loads
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/openapi.json#DELETE /api/v1/Loads/{loadId}
+    - openapi/_original/openapi.json#POST /api/v1/Loads

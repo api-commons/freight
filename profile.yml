@@ -1,0 +1,279 @@
+context: freight
+name: Freight and TMS
+generated: '2026-11-11'
+version: 0.1.0-draft.20261111
+status: draft
+cohort:
+  tags:
+  - Freight
+  - Trucking
+  - TMS
+  - Transportation Management
+  - Freight Brokerage
+  - LTL
+  - Truckload
+  - Logistics
+  providers_with_harvested_openapi: 205
+thresholds:
+  core: 0.5
+  extended: 0.2
+  min_providers: 3
+excluded: {}
+duplicates:
+  kargo:
+  - kargo-ai
+shared_specs: {}
+concepts:
+  load:
+    segments_seen:
+      loads: 10
+      load: 1
+      shipments: 1
+    providers_exposing: 12
+    providers_with_readable_schema: 9
+    operations:
+    - operation: POST collection
+      providers: 9
+      share: 0.75
+      tier: core
+    - operation: GET item
+      providers: 7
+      share: 0.583
+      tier: core
+    - operation: GET collection
+      providers: 6
+      share: 0.5
+      tier: core
+    - operation: DELETE item
+      providers: 4
+      share: 0.333
+      tier: extended
+    - operation: UPDATE item
+      providers: 2
+      share: 0.167
+      tier: long-tail
+    - operation: UPDATE collection
+      providers: 1
+      share: 0.083
+      tier: long-tail
+    properties:
+    - name: commodity
+      tier: core
+      providers: 5
+      share: 0.556
+      type: string
+      spellings:
+      - commodity
+    - name: id
+      tier: core
+      providers: 5
+      share: 0.556
+      type: string
+      spellings:
+      - id
+      - shipmentId
+      - external_id
+      - loadId
+      - load_id
+    - name: status
+      tier: core
+      providers: 5
+      share: 0.556
+      type: string
+      spellings:
+      - status
+      - state
+    - name: weight
+      tier: core
+      providers: 5
+      share: 0.556
+      type: number
+      spellings:
+      - weight
+    - name: created_at
+      tier: extended
+      providers: 4
+      share: 0.444
+      type: string
+      spellings:
+      - createdAt
+      - created_at
+    - name: equipment_type
+      tier: extended
+      providers: 4
+      share: 0.444
+      type: string
+      spellings:
+      - mode
+      - equipment
+      - equipment_type
+    - name: stops
+      tier: extended
+      providers: 4
+      share: 0.444
+      type: array
+      spellings:
+      - stops
+      - waypoints
+    - name: updated_at
+      tier: extended
+      providers: 4
+      share: 0.444
+      type: string
+      spellings:
+      - updatedAt
+      - updated_at
+    - name: carrier_id
+      tier: extended
+      providers: 3
+      share: 0.333
+      type: object
+      spellings:
+      - carrier
+    - name: distance
+      tier: extended
+      providers: 3
+      share: 0.333
+      type: number
+      spellings:
+      - distance
+    long_tail_count: 144
+    long_tail_sample:
+    - customer
+    - customer_name
+    - dimensions
+    - notes
+    - rate
+    - total_carrier_rate
+    - accessorials
+    - active_offer
+    - ai_review
+    - allowed_actions
+    - approvable
+    - approval_status
+    - approved
+    - approved_at
+    - arrived_dropoff_at
+    - arrived_pickup_at
+    - bid_custom_values
+    - bid_expiration
+    - billing_approved_at
+    - bookable
+    - booking_link
+    - brokerage
+    - brokerage_load_id
+    - brokerage_load_internal_id
+    - buy_price
+    - buy_side_rep
+    - carrier_email
+    - carrier_name
+    - carrier_payee
+    - carrier_payment_statuses
+    - carrier_phone_number
+    - carriers
+    - commodity_items
+    - company_dot_number
+    - company_external_key
+    - company_mc_number
+    - company_name
+    - contact_email
+    - contact_phone
+    - created_datetime
+  freight_carrier:
+    segments_seen:
+      carriers: 3
+      carrier: 2
+    providers_exposing: 5
+    providers_with_readable_schema: 4
+    operations:
+    - operation: POST collection
+      providers: 4
+      share: 0.8
+      tier: core
+    - operation: DELETE item
+      providers: 3
+      share: 0.6
+      tier: core
+    - operation: GET collection
+      providers: 3
+      share: 0.6
+      tier: core
+    - operation: GET item
+      providers: 3
+      share: 0.6
+      tier: core
+    - operation: UPDATE item
+      providers: 2
+      share: 0.4
+      tier: long-tail
+    properties:
+    - name: email
+      tier: core
+      providers: 3
+      share: 0.75
+      type: string
+      spellings:
+      - email
+    - name: id
+      tier: core
+      providers: 3
+      share: 0.75
+      type: string
+      spellings:
+      - id
+    - name: name
+      tier: core
+      providers: 3
+      share: 0.75
+      type: string
+      spellings:
+      - name
+    - name: phone
+      tier: core
+      providers: 3
+      share: 0.75
+      type: string
+      spellings:
+      - phone
+    long_tail_count: 91
+    long_tail_sample:
+    - contacts
+    - dot_number
+    - mc_number
+    - notes
+    - phone_number
+    - scac
+    - status
+    - action
+    - address
+    - appointments
+    - billing_address
+    - billing_status
+    - booked_at
+    - charges
+    - company
+    - company_name
+    - compliance_status
+    - contact
+    - corporate_address
+    - create_date_time
+    - created_at
+    - created_by
+    - currency
+    - custom_data
+    - dba_name
+    - deleted_at
+    - dispatched_at
+    - driver_name
+    - driver_phone
+    - drivers
+    - ein_number
+    - entity
+    - equipments
+    - failure_count
+    - ff_number
+    - friendly_id
+    - golden_carrier_id
+    - iata_code
+    - in_fmcsa
+    - insurance_agent

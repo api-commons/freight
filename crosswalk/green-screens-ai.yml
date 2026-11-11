@@ -1,0 +1,23 @@
+provider: green-screens-ai
+apis_io: https://apis.io/providers/green-screens-ai/
+context: freight
+generated: '2026-11-11'
+concepts:
+  load:
+    path_segment:
+    - loads
+    properties:
+      commodity: commodity
+      weight: weight
+      distance: distance
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/green-screens-ai-openapi.yml#POST /history/loads
+  freight_carrier:
+    path_segment:
+    - carriers
+    properties:
+      email: email
+    core_coverage: 0.25
+    evidence:
+    - openapi/_original/green-screens-ai-openapi.yml#GET /bids/carriers

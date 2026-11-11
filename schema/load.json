@@ -1,0 +1,122 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-commons/freight/main/schema/load.json",
+  "title": "Load",
+  "description": "The common load in Freight and TMS, distilled from 9 providers' own OpenAPI. Each property records the share of them that declare it.",
+  "type": "object",
+  "properties": {
+    "commodity": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.556,
+      "x-commons-providers": 5,
+      "x-commons-spellings": [
+        "commodity"
+      ]
+    },
+    "id": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.556,
+      "x-commons-providers": 5,
+      "x-commons-spellings": [
+        "id",
+        "shipmentId",
+        "external_id",
+        "loadId",
+        "load_id"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.556,
+      "x-commons-providers": 5,
+      "x-commons-spellings": [
+        "status",
+        "state"
+      ]
+    },
+    "weight": {
+      "type": "number",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.556,
+      "x-commons-providers": 5,
+      "x-commons-spellings": [
+        "weight"
+      ]
+    },
+    "created_at": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.444,
+      "x-commons-providers": 4,
+      "x-commons-spellings": [
+        "createdAt",
+        "created_at"
+      ],
+      "format": "date-time"
+    },
+    "equipment_type": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.444,
+      "x-commons-providers": 4,
+      "x-commons-spellings": [
+        "mode",
+        "equipment",
+        "equipment_type"
+      ]
+    },
+    "stops": {
+      "type": "array",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.444,
+      "x-commons-providers": 4,
+      "x-commons-spellings": [
+        "stops",
+        "waypoints"
+      ]
+    },
+    "updated_at": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.444,
+      "x-commons-providers": 4,
+      "x-commons-spellings": [
+        "updatedAt",
+        "updated_at"
+      ],
+      "format": "date-time"
+    },
+    "carrier_id": {
+      "type": "object",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.333,
+      "x-commons-providers": 3,
+      "x-commons-spellings": [
+        "carrier"
+      ]
+    },
+    "distance": {
+      "type": "number",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.333,
+      "x-commons-providers": 3,
+      "x-commons-spellings": [
+        "distance"
+      ]
+    }
+  },
+  "required": [
+    "id"
+  ],
+  "x-commons": {
+    "context": "freight",
+    "concept": "load",
+    "providers": 9,
+    "generated": "2026-11-11",
+    "version": "0.1.0-draft.20261111",
+    "status": "draft"
+  }
+}

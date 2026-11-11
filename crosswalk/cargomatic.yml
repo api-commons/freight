@@ -1,0 +1,12 @@
+provider: cargomatic
+apis_io: https://apis.io/providers/cargomatic/
+context: freight
+generated: '2026-11-11'
+concepts:
+  load:
+    path_segment:
+    - loads
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/cargomatic-openapi.yml#POST /webhooks/loads

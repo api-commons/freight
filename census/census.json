@@ -1,0 +1,2901 @@
+{
+ "cohort_size": 205,
+ "unreadable": [],
+ "concepts": {
+  "load": {
+   "augment": {
+    "segments": [
+     "loads"
+    ],
+    "operations": [
+     "GET collection",
+     "PATCH collection",
+     "POST collection"
+    ],
+    "properties": {
+     "brokerageLoadId": "string",
+     "brokerageLoadInternalId": [
+      "string",
+      "null"
+     ],
+     "status": null,
+     "mode": [
+      "string",
+      "null"
+     ],
+     "loadType": [
+      "string",
+      "null"
+     ],
+     "route": "array",
+     "totalMiles": [
+      "number",
+      "null"
+     ],
+     "equipment": [
+      "string",
+      "null"
+     ],
+     "equipmentDescription": [
+      "string",
+      "null"
+     ],
+     "accessorials": "array",
+     "weight": [
+      "object",
+      "null"
+     ],
+     "dimensions": [
+      "object",
+      "null"
+     ],
+     "minimumTemperature": [
+      "object",
+      "null"
+     ],
+     "maximumTemperature": [
+      "object",
+      "null"
+     ],
+     "tarpSize": [
+      "string",
+      "null"
+     ],
+     "minimumBulkHeadTemperature": [
+      "object",
+      "null"
+     ],
+     "maximumBulkHeadTemperature": [
+      "object",
+      "null"
+     ],
+     "commodity": [
+      "string",
+      "null"
+     ],
+     "commodityItems": [
+      "array",
+      "null"
+     ],
+     "service": [
+      "string",
+      "null"
+     ],
+     "highValueAmount": [
+      "number",
+      "null"
+     ],
+     "targetRate": [
+      "number",
+      "null"
+     ],
+     "maxRate": [
+      "number",
+      "null"
+     ],
+     "totalRate": [
+      "number",
+      "null"
+     ],
+     "totalCarrierRate": [
+      "number",
+      "null"
+     ],
+     "bidExpiration": [
+      "string",
+      "null"
+     ],
+     "bidCustomValues": "array",
+     "isPostedToDAT": "boolean",
+     "isPostedToHighway": [
+      "boolean",
+      "null"
+     ],
+     "customerName": [
+      "string",
+      "null"
+     ],
+     "customerId": [
+      "string",
+      "null"
+     ],
+     "referenceNumbers": "array",
+     "trackingEvents": "array",
+     "externalTrackingStatus": null,
+     "notes": "array",
+     "customers": "array",
+     "loadShipments": "array",
+     "podCollectionStatus": "string",
+     "lastLocationUpdate": [
+      "string",
+      "null"
+     ],
+     "groupExternalId": [
+      "string",
+      "null"
+     ],
+     "createdAt": "string",
+     "updatedAt": "string",
+     "load": "object",
+     "carrier": null,
+     "brokerage": "object",
+     "customer": "object",
+     "carrierPaymentStatuses": "array",
+     "loadReference": "string",
+     "operations": "array"
+    },
+    "evidence": [
+     "openapi/_original/augment-openapi.json#GET /v2/loads",
+     "openapi/_original/augment-openapi.json#PATCH /v2/loads",
+     "openapi/_original/augment-openapi.json#POST /v2/loads"
+    ]
+   },
+   "cargomatic": {
+    "segments": [
+     "loads"
+    ],
+    "operations": [
+     "POST collection"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/cargomatic-openapi.yml#POST /webhooks/loads"
+    ]
+   },
+   "coyote": {
+    "segments": [
+     "loads"
+    ],
+    "operations": [
+     "DELETE item",
+     "POST collection"
+    ],
+    "properties": {
+     "customer": "object",
+     "loadDetail": "object"
+    },
+    "evidence": [
+     "openapi/_original/openapi.json#DELETE /api/v1/Loads/{loadId}",
+     "openapi/_original/openapi.json#POST /api/v1/Loads"
+    ]
+   },
+   "descartes": {
+    "segments": [
+     "load"
+    ],
+    "operations": [
+     "POST collection"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/descartes-macropoint-capacity-openapi.yml#POST /api/v2/Load"
+    ]
+   },
+   "green-screens-ai": {
+    "segments": [
+     "loads"
+    ],
+    "operations": [
+     "POST collection"
+    ],
+    "properties": {
+     "totalCarrierCost": "number",
+     "totalCarrierRate": "number",
+     "loadPickupDate": "string",
+     "pickupDateTime": "string",
+     "deliveredDateTime": "string",
+     "transportTypeTms": "string",
+     "distance": "number",
+     "weight": "number",
+     "commodity": "string",
+     "originCountry": "string",
+     "originState": "string",
+     "originCity": "string",
+     "originZip": "string",
+     "destinationCountry": "string",
+     "destinationState": "string",
+     "destinationCity": "string",
+     "destinationZip": "string",
+     "extraStops": "array",
+     "carrierName": "string",
+     "carrierPhoneNumber": "string",
+     "carrierEmail": "string",
+     "customerName": "string",
+     "customerPhoneNumber": "string",
+     "customerEmail": "string",
+     "sellRate": "number",
+     "buySideRep": "string",
+     "sellSideRep": "string",
+     "loadProNumber": "string",
+     "currency": "string",
+     "dateFrom": "string",
+     "dateTo": "string",
+     "transportType": "string",
+     "region": "string"
+    },
+    "evidence": [
+     "openapi/_original/green-screens-ai-openapi.yml#POST /history/loads"
+    ]
+   },
+   "loadsmart": {
+    "segments": [
+     "loads"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "id": "string",
+     "active_offer": "object",
+     "carrier": "object",
+     "equipment_type": "string",
+     "commodity": "string",
+     "weight": "number",
+     "dimensions": "object",
+     "distance": "number",
+     "stops": "array",
+     "requirements": "object",
+     "ref_number": "string",
+     "reason": "string"
+    },
+    "evidence": [
+     "openapi/_original/loadsmart-shipperguide-openapi.yml#DELETE /api/v2/load-offers/loads/{load_id}",
+     "openapi/_original/loadsmart-shipperguide-openapi.yml#GET /api/v2/load-offers/loads/",
+     "openapi/_original/loadsmart-shipperguide-openapi.yml#GET /api/v2/load-offers/loads/{load_id}"
+    ]
+   },
+   "mvmnt": {
+    "segments": [
+     "loads"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET item",
+     "PATCH item",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "string",
+     "key": [
+      "string",
+      "null"
+     ],
+     "shipmentId": "string",
+     "shipmentKey": [
+      "string",
+      "null"
+     ],
+     "mode": "string",
+     "status": "string",
+     "stops": "array",
+     "carriers": "array",
+     "totalCost": [
+      "number",
+      "null"
+     ],
+     "createdAt": "string",
+     "updatedAt": [
+      "string",
+      "null"
+     ],
+     "pickedUpAt": [
+      "string",
+      "null"
+     ],
+     "deliveredAt": [
+      "string",
+      "null"
+     ],
+     "load": "object"
+    },
+    "evidence": [
+     "openapi/_original/mvmnt-openapi-original.yml#DELETE /loads/{id}",
+     "openapi/_original/mvmnt-openapi-original.yml#GET /loads/{id}",
+     "openapi/_original/mvmnt-openapi-original.yml#PATCH /loads/{id}",
+     "openapi/_original/mvmnt-openapi-original.yml#POST /loads"
+    ]
+   },
+   "omniful-inc": {
+    "segments": [
+     "shipments"
+    ],
+    "operations": [
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/omniful-inc-openapi.yml#GET /sales-channel/public/v2/tms/shipments/{shipment_id}",
+     "openapi/_original/omniful-inc-openapi.yml#POST /sales-channel/public/v2/tms/shipments"
+    ]
+   },
+   "parade": {
+    "segments": [
+     "loads"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "reference_id": "string",
+     "created_at": "string",
+     "updated_at": "string",
+     "external_posting_id": "string",
+     "visibility": "string",
+     "company_external_key": "string",
+     "company_name": "string",
+     "company_dot_number": "string",
+     "company_mc_number": "string",
+     "booking_link": "string",
+     "stops": "array",
+     "bookable": "boolean",
+     "offer_rate": "number",
+     "offer_external_key": "string",
+     "equipment": "string",
+     "equipment_metadata": "object",
+     "owner_email": "string",
+     "owner_phone": "string",
+     "weight": "number",
+     "commodity": "string",
+     "route_metadata": "object",
+     "contact_email": "string",
+     "contact_phone": "string",
+     "distance": "number",
+     "display_metadata": "object",
+     "allowed_actions": "array"
+    },
+    "evidence": [
+     "openapi/_original/parade-digital-transactions-openapi.yaml#GET /ls/syndication/loads/{external_posting_id}",
+     "openapi/_original/parade-load-sync-openapi.yaml#GET /syndication/loads"
+    ]
+   },
+   "roadsync": {
+    "segments": [
+     "loads"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "integer",
+     "amount": "number",
+     "status": null,
+     "created_datetime": "string",
+     "updated_datetime": "string",
+     "payee": "object",
+     "carrier_payee": "object",
+     "payable": "object",
+     "load_number": "string",
+     "external_id": "string",
+     "payee_id": "integer"
+    },
+    "evidence": [
+     "openapi/_original/roadsync-rspay-openapi.json#GET /loads",
+     "openapi/_original/roadsync-rspay-openapi.json#GET /loads/{load_id}",
+     "openapi/_original/roadsync-rspay-openapi.json#POST /loads"
+    ]
+   },
+   "ryder-system": {
+    "segments": [
+     "loads"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "loadId": "string",
+     "status": "string",
+     "origin": "object",
+     "destination": "object",
+     "pickupDate": "string",
+     "deliveryDate": "string",
+     "weight": "number",
+     "commodity": "string",
+     "driver": "object",
+     "vehicle": "object",
+     "shipmentId": "string",
+     "carrier": "string"
+    },
+    "evidence": [
+     "openapi/_original/ryder-carrier-api-openapi.yml#GET /loads",
+     "openapi/_original/ryder-carrier-api-openapi.yml#GET /loads/{loadId}",
+     "openapi/_original/ryder-tm-shipment-api-openapi.yml#GET /loads",
+     "openapi/_original/ryder-tm-shipment-api-openapi.yml#GET /loads/{loadId}"
+    ]
+   },
+   "treadio": {
+    "segments": [
+     "loads"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "string",
+     "quantity": "string",
+     "unit_of_measure": "string",
+     "load_id": "string",
+     "ordinality": "integer",
+     "ticket": null,
+     "created_at": "string",
+     "updated_at": "string",
+     "foremen": "array",
+     "job_id": "string",
+     "state": null,
+     "phase": null,
+     "material": "object",
+     "waypoints": "array",
+     "notes": "string",
+     "approved_at": "string",
+     "approval_status": null,
+     "ai_review": "object",
+     "approved": "boolean",
+     "approvable": "boolean",
+     "unapprovable": "boolean",
+     "billing_approved_at": "string",
+     "field_approved_at": "string",
+     "sell_price": "string",
+     "buy_price": "string",
+     "site": null,
+     "arrived_pickup_at": "string",
+     "pickup_time_minutes": "integer",
+     "arrived_dropoff_at": "string",
+     "dropoff_time_minutes": "integer",
+     "load_completed_at": "string",
+     "loaded_at": "string",
+     "unloaded_at": "string",
+     "gps_minutes": "integer",
+     "has_gps_data": "boolean",
+     "editable": "boolean",
+     "travelled_distance_meters": "string",
+     "phase_id": "string",
+     "material_id": "string",
+     "material_rate_assignment": "object"
+    },
+    "evidence": [
+     "openapi/_original/treadio-horizon-openapi.json#DELETE /v1/loads/{id}",
+     "openapi/_original/treadio-horizon-openapi.json#GET /v1/companies/{company-id}/jobs/{job-id}/loads",
+     "openapi/_original/treadio-horizon-openapi.json#GET /v1/companies/{company-id}/settlements/{settlement-id}/loads",
+     "openapi/_original/treadio-horizon-openapi.json#GET /v1/jobs/{job-id}/loads",
+     "openapi/_original/treadio-horizon-openapi.json#GET /v1/loads/{id}",
+     "openapi/_original/treadio-horizon-openapi.json#PATCH /v1/loads/{id}",
+     "openapi/_original/treadio-horizon-openapi.json#POST /v1/jobs/{job-id}/loads"
+    ]
+   }
+  },
+  "freight_carrier": {
+   "aeb": {
+    "segments": [
+     "carriers"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PUT item"
+    ],
+    "properties": {
+     "identCode": "string",
+     "name": "string",
+     "isCarrierValidationSupported": "boolean",
+     "isBillingAdapterSupported": "boolean"
+    },
+    "evidence": [
+     "openapi/_original/aeb-carrier-select-openapi.json#DELETE /carriers/{id}",
+     "openapi/_original/aeb-carrier-select-openapi.json#GET /carriers",
+     "openapi/_original/aeb-carrier-select-openapi.json#GET /carriers/{id}",
+     "openapi/_original/aeb-carrier-select-openapi.json#PUT /carriers/{id}"
+    ]
+   },
+   "alphaloops": {
+    "segments": [
+     "carriers"
+    ],
+    "operations": [
+     "GET item"
+    ],
+    "properties": {
+     "dot_number": "string",
+     "legal_name": [
+      "string",
+      "null"
+     ],
+     "dba_name": [
+      "string",
+      "null"
+     ],
+     "mc_number": [
+      "string",
+      "null"
+     ],
+     "mx_number": [
+      "string",
+      "null"
+     ],
+     "ff_number": [
+      "string",
+      "null"
+     ],
+     "duns_number": [
+      "string",
+      "null"
+     ],
+     "domain": [
+      "string",
+      "null"
+     ],
+     "alternative_domain": [
+      "string",
+      "null"
+     ],
+     "status": [
+      "string",
+      "null"
+     ],
+     "carrier_type": [
+      "array",
+      "null"
+     ],
+     "authority_types": [
+      "array",
+      "null"
+     ],
+     "carrier_operation": [
+      "string",
+      "null"
+     ],
+     "authority_based_carrier_type": [
+      "string",
+      "null"
+     ],
+     "operating_authority_status": [
+      "string",
+      "null"
+     ],
+     "earliest_common_date": [
+      "string",
+      "null"
+     ],
+     "earliest_contract_date": [
+      "string",
+      "null"
+     ],
+     "earliest_broker_date": [
+      "string",
+      "null"
+     ],
+     "property": [
+      "boolean",
+      "null"
+     ],
+     "passenger": [
+      "boolean",
+      "null"
+     ],
+     "household_goods": [
+      "boolean",
+      "null"
+     ],
+     "email_address": [
+      "string",
+      "null"
+     ],
+     "phone": [
+      "string",
+      "null"
+     ],
+     "cell_phone": [
+      "string",
+      "null"
+     ],
+     "fax": [
+      "string",
+      "null"
+     ],
+     "timezone": [
+      "string",
+      "null"
+     ],
+     "physical_address": [
+      "object",
+      "null"
+     ],
+     "latitude": [
+      "number",
+      "null"
+     ],
+     "longitude": [
+      "number",
+      "null"
+     ],
+     "power_units": [
+      "integer",
+      "null"
+     ],
+     "drivers": [
+      "integer",
+      "null"
+     ],
+     "truck_units": [
+      "integer",
+      "null"
+     ],
+     "day_cabs": [
+      "integer",
+      "null"
+     ],
+     "sleeper_cabs": [
+      "integer",
+      "null"
+     ],
+     "owned_trucks": [
+      "integer",
+      "null"
+     ],
+     "total_trailers": [
+      "integer",
+      "null"
+     ],
+     "bus_units": [
+      "integer",
+      "null"
+     ],
+     "avg_truck_age_years": [
+      "number",
+      "null"
+     ],
+     "growth": [
+      "object",
+      "null"
+     ],
+     "fleet_composition": [
+      "object",
+      "null"
+     ],
+     "gvwr_classes": [
+      "object",
+      "null"
+     ],
+     "avg_gvwr_class": [
+      "number",
+      "null"
+     ],
+     "light_trucks": [
+      "integer",
+      "null"
+     ],
+     "heavy_trucks": [
+      "integer",
+      "null"
+     ],
+     "fuel_consumption": [
+      "object",
+      "null"
+     ],
+     "cargo": [
+      "array",
+      "null"
+     ],
+     "cargo_type": [
+      "array",
+      "null"
+     ],
+     "hazmat_threshold": [
+      "boolean",
+      "null"
+     ],
+     "mcs_mileage": [
+      "number",
+      "null"
+     ],
+     "recent_mileage": [
+      "number",
+      "null"
+     ],
+     "distinct_states_served": [
+      "integer",
+      "null"
+     ],
+     "radius_90pct_miles": [
+      "number",
+      "null"
+     ],
+     "date_added": [
+      "string",
+      "null"
+     ],
+     "company_description": [
+      "string",
+      "null"
+     ],
+     "business_type": [
+      "string",
+      "null"
+     ],
+     "services": [
+      "array",
+      "null"
+     ],
+     "company_officers": [
+      "array",
+      "null"
+     ],
+     "estimated_employees": [
+      "integer",
+      "null"
+     ],
+     "annual_revenue": [
+      "number",
+      "null"
+     ],
+     "founded_year": [
+      "integer",
+      "null"
+     ],
+     "linkedin_url": [
+      "string",
+      "null"
+     ],
+     "technology": [
+      "object",
+      "null"
+     ],
+     "top_truckstop_brand": [
+      "string",
+      "null"
+     ],
+     "safety_rating": [
+      "string",
+      "null"
+     ],
+     "risk": [
+      "object",
+      "null"
+     ],
+     "accidents_summary": [
+      "object",
+      "null"
+     ],
+     "inspections_summary": [
+      "object",
+      "null"
+     ],
+     "insurance": [
+      "object",
+      "null"
+     ]
+    },
+    "evidence": [
+     "openapi/_original/alphaloops-openapi.json#GET /v1/carriers/{dot_number}"
+    ]
+   },
+   "augment": {
+    "segments": [
+     "carriers"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "string",
+     "name": "string",
+     "tmsId": "string",
+     "status": "object",
+     "complianceStatus": "object",
+     "mcNumber": "integer",
+     "dotNumber": "integer",
+     "scac": "string",
+     "address": "object",
+     "email": "string",
+     "phone": "string",
+     "phoneExtension": "string",
+     "managers": "array",
+     "contacts": "array",
+     "notes": "string",
+     "customData": null,
+     "total": "integer",
+     "successCount": "integer",
+     "failureCount": "integer",
+     "errors": "array"
+    },
+    "evidence": [
+     "openapi/_original/augment-openapi.json#DELETE /v1/carriers/{carrierId}",
+     "openapi/_original/augment-openapi.json#GET /v1/carriers",
+     "openapi/_original/augment-openapi.json#GET /v1/carriers/{carrierId}",
+     "openapi/_original/augment-openapi.json#POST /v1/carriers",
+     "openapi/_original/augment-openapi.json#POST /v1/carriers/bulk"
+    ]
+   },
+   "descartes": {
+    "segments": [
+     "carrier"
+    ],
+    "operations": [
+     "POST collection"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/descartes-macropoint-capacity-openapi.yml#POST /api/v2/Carrier"
+    ]
+   },
+   "green-screens-ai": {
+    "segments": [
+     "carriers"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "companyName": "string",
+     "email": "string",
+     "phoneNumber": "string"
+    },
+    "evidence": [
+     "openapi/_original/green-screens-ai-openapi.yml#GET /bids/carriers"
+    ]
+   },
+   "karrio": {
+    "segments": [
+     "carriers"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "carrier_name": "string",
+     "display_name": "string",
+     "capabilities": "array",
+     "connection_fields": "object",
+     "config_fields": "object"
+    },
+    "evidence": [
+     "openapi/_original/karrio-openapi.yml#GET /v1/carriers"
+    ]
+   },
+   "loadsmart": {
+    "segments": [
+     "carrier"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "count": "number",
+     "total": "number",
+     "page": "number",
+     "pageCount": "number",
+     "action": "string",
+     "entity": "string",
+     "data": "array",
+     "id": "string",
+     "createDateTime": "string",
+     "createdBy": "object",
+     "lastChangedDateTime": "string",
+     "role": "string",
+     "appointments": "array",
+     "company": "Company",
+     "orgCarrierSettings": "array",
+     "org": "Org",
+     "warehouseAccessList": "UUID",
+     "tcConfirmedAt": "string",
+     "phone": "string",
+     "tags": "object",
+     "name": "string",
+     "phone_number": "string",
+     "sms_enabled": "boolean",
+     "location": "object"
+    },
+    "evidence": [
+     "openapi/_original/loadsmart-opendock-openapi.yml#GET /carrier",
+     "openapi/_original/loadsmart-opendock-openapi.yml#GET /carrier/{id}",
+     "openapi/_original/loadsmart-opendock-openapi.yml#GET /metrics/appointment-volume/carrier",
+     "openapi/_original/loadsmart-opendock-openapi.yml#POST /carrier",
+     "openapi/_original/loadsmart-shipperguide-openapi.yml#DELETE /api/v2/carrier/{driver_id}",
+     "openapi/_original/loadsmart-shipperguide-openapi.yml#GET /api/v2/carrier/{driver_id}",
+     "openapi/_original/loadsmart-shipperguide-openapi.yml#PUT /api/v2/carrier/{driver_id}"
+    ]
+   },
+   "mvmnt": {
+    "segments": [
+     "carriers"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET item",
+     "PATCH item",
+     "POST collection"
+    ],
+    "properties": {
+     "object": "string",
+     "id": "string",
+     "friendlyId": "string",
+     "type": "string",
+     "name": "string",
+     "dbaName": [
+      "string",
+      "null"
+     ],
+     "key": [
+      "string",
+      "null"
+     ],
+     "email": [
+      "string",
+      "null"
+     ],
+     "phone": [
+      "string",
+      "null"
+     ],
+     "website": [
+      "string",
+      "null"
+     ],
+     "status": "string",
+     "statusReason": [
+      "string",
+      "null"
+     ],
+     "notes": [
+      "string",
+      "null"
+     ],
+     "corporateAddress": null,
+     "billingAddress": null,
+     "mcNumber": [
+      "string",
+      "null"
+     ],
+     "dotNumber": [
+      "string",
+      "null"
+     ],
+     "scac": [
+      "string",
+      "null"
+     ],
+     "einNumber": [
+      "string",
+      "null"
+     ],
+     "ffNumber": [
+      "string",
+      "null"
+     ],
+     "mxNumber": [
+      "string",
+      "null"
+     ],
+     "rfcNumber": [
+      "string",
+      "null"
+     ],
+     "iataCode": [
+      "string",
+      "null"
+     ],
+     "equipments": "array",
+     "isHazmat": [
+      "boolean",
+      "null"
+     ],
+     "tsaApproved": [
+      "boolean",
+      "null"
+     ],
+     "trucks": [
+      "integer",
+      "null"
+     ],
+     "trailers": [
+      "integer",
+      "null"
+     ],
+     "drivers": [
+      "integer",
+      "null"
+     ],
+     "powerUnits": [
+      "integer",
+      "null"
+     ],
+     "currency": null,
+     "paymentTerm": null,
+     "isFactoringPreferred": [
+      "boolean",
+      "null"
+     ],
+     "goldenCarrierId": [
+      "string",
+      "null"
+     ],
+     "paymentMethods": "array",
+     "contacts": "array",
+     "createdAt": "string",
+     "updatedAt": "string",
+     "deletedAt": [
+      "string",
+      "null"
+     ],
+     "insuranceCompany": [
+      "string",
+      "null"
+     ],
+     "insuranceAgent": [
+      "string",
+      "null"
+     ],
+     "insuranceAgentPhone": [
+      "string",
+      "null"
+     ],
+     "insuranceAuthorityDate": [
+      "string",
+      "null"
+     ],
+     "insuranceExpirationDate": [
+      "string",
+      "null"
+     ],
+     "insuranceAutoLiabilityLimit": [
+      "number",
+      "null"
+     ],
+     "insuranceCargoLiabilityLimit": [
+      "number",
+      "null"
+     ],
+     "insuranceGeneralLiabilityLimit": [
+      "number",
+      "null"
+     ],
+     "rating": [
+      "string",
+      "null"
+     ],
+     "ratingDate": [
+      "string",
+      "null"
+     ],
+     "reviewType": [
+      "string",
+      "null"
+     ],
+     "reviewDate": [
+      "string",
+      "null"
+     ],
+     "operatingAbility": [
+      "string",
+      "null"
+     ],
+     "inFmcsa": [
+      "boolean",
+      "null"
+     ],
+     "usDriverInspections": [
+      "integer",
+      "null"
+     ],
+     "usDriverInspectionsOos": [
+      "integer",
+      "null"
+     ],
+     "usDriverInspectionsOosPct": [
+      "number",
+      "null"
+     ],
+     "usVehicleInspections": [
+      "integer",
+      "null"
+     ],
+     "usVehicleInspectionsOos": [
+      "integer",
+      "null"
+     ],
+     "usVehicleInspectionsOosPct": [
+      "number",
+      "null"
+     ],
+     "paymentTermId": "string",
+     "carrier": "object",
+     "contact": "object",
+     "billingStatus": "string",
+     "bookedAt": [
+      "string",
+      "null"
+     ],
+     "dispatchedAt": [
+      "string",
+      "null"
+     ],
+     "charges": "array",
+     "totalCost": [
+      "number",
+      "null"
+     ],
+     "driverName": [
+      "string",
+      "null"
+     ],
+     "driverPhone": [
+      "string",
+      "null"
+     ],
+     "truckNumber": [
+      "string",
+      "null"
+     ],
+     "trailerNumber": [
+      "string",
+      "null"
+     ]
+    },
+    "evidence": [
+     "openapi/_original/mvmnt-openapi-original.yml#DELETE /carriers/{id}",
+     "openapi/_original/mvmnt-openapi-original.yml#GET /carriers/{id}",
+     "openapi/_original/mvmnt-openapi-original.yml#GET /loads/{loadId}/carriers/{carrierId}",
+     "openapi/_original/mvmnt-openapi-original.yml#PATCH /carriers/{id}",
+     "openapi/_original/mvmnt-openapi-original.yml#PATCH /loads/{loadId}/carriers/{carrierId}",
+     "openapi/_original/mvmnt-openapi-original.yml#POST /carriers"
+    ]
+   },
+   "onerail": {
+    "segments": [
+     "carriers"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "id": "string",
+     "name": "string",
+     "active": "boolean"
+    },
+    "evidence": [
+     "openapi/_original/onerail-operations-api-openapi.json#GET /v1/organization/{organizationId}/carriers",
+     "openapi/_original/onerail-operations-api-openapi.yml#GET /v1/organization/{organizationId}/carriers"
+    ]
+   },
+   "oracle-transportation-management": {
+    "segments": [
+     "carriers"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "servprovGid": "string",
+     "servprovXid": "string",
+     "name": "string",
+     "scacCode": "string",
+     "status": "string",
+     "transportationModes": "array",
+     "contactName": "string",
+     "contactPhone": "string",
+     "contactEmail": "string",
+     "insertDate": "string"
+    },
+    "evidence": [
+     "openapi/_original/oracle-otm-business-objects-openapi.yml#GET /carriers",
+     "openapi/_original/oracle-otm-business-objects-openapi.yml#GET /carriers/{gid}"
+    ]
+   },
+   "sendcloud": {
+    "segments": [
+     "carriers"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "carriers": "array",
+     "carrier_code": "string",
+     "from_country_code": [
+      "string",
+      "null"
+     ],
+     "to_country_code": [
+      "string",
+      "null"
+     ],
+     "start_date": "string",
+     "end_date": "string",
+     "total_parcels": "integer",
+     "transit_time_hours": "number",
+     "transit_time_days": "integer"
+    },
+    "evidence": [
+     "openapi/_original/sendcloud-v2-analytics-openapi.yml#GET /analytics/carriers",
+     "openapi/_original/sendcloud-v3-analytics-openapi.yml#GET /analytics/transit-times/carriers"
+    ]
+   },
+   "shipcloud": {
+    "segments": [
+     "carriers"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "name": null,
+     "display_name": "string",
+     "services": "array",
+     "package_types": "array",
+     "additional_services": "array"
+    },
+    "evidence": [
+     "openapi/_original/shipcloud-openapi.yml#GET /carriers",
+     "openapi/_original/shipcloud_v1_oai3.json#GET /carriers"
+    ]
+   },
+   "shipday": {
+    "segments": [
+     "carriers"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "integer",
+     "name": "string",
+     "phoneNumber": "string",
+     "email": "string",
+     "carrierPhoto": "string",
+     "isOnShift": "boolean",
+     "isActive": "boolean",
+     "carrierId": "integer",
+     "password": "string",
+     "message": "string",
+     "success": "boolean",
+     "response": "string"
+    },
+    "evidence": [
+     "openapi/_original/shipday-openapi.yml#DELETE /carriers/{carrierId}",
+     "openapi/_original/shipday-openapi.yml#GET /carriers",
+     "openapi/_original/shipday-openapi.yml#POST /carriers"
+    ]
+   },
+   "shipstation": {
+    "segments": [
+     "carriers"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "name": "string",
+     "code": "string",
+     "accountNumber": "string",
+     "requiresFundedAccount": "boolean",
+     "balance": "number",
+     "nickname": "string",
+     "shippingProviderId": "integer",
+     "primary": "boolean"
+    },
+    "evidence": [
+     "openapi/_original/shipstation-v1-openapi.yml#GET /carriers"
+    ]
+   },
+   "turvo": {
+    "segments": [
+     "carriers"
+    ],
+    "operations": [
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "id": "string",
+     "name": "string",
+     "mcNumber": "string",
+     "dotNumber": "string",
+     "scac": "string",
+     "equipmentTypes": "array",
+     "contacts": "array",
+     "compliance": "object"
+    },
+    "evidence": [
+     "openapi/_original/turvo-openapi.yml#GET /carriers/{id}",
+     "openapi/_original/turvo-openapi.yml#POST /carriers",
+     "openapi/_original/turvo-openapi.yml#PUT /carriers/{id}"
+    ]
+   },
+   "vooma": {
+    "segments": [
+     "carriers"
+    ],
+    "operations": [
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "id": "string",
+     "equipment": "array",
+     "contacts": "array",
+     "dotNumber": "string",
+     "mcNumber": "string",
+     "name": "string"
+    },
+    "evidence": [
+     "openapi/_original/vooma-openapi-original.json#GET /carriers/{carrierId}",
+     "openapi/_original/vooma-openapi-original.json#POST /carriers",
+     "openapi/_original/vooma-openapi-original.json#PUT /carriers/{carrierId}"
+    ]
+   }
+  }
+ },
+ "naming": {
+  "path_segment": {
+   "lower": [
+    "17track",
+    "3plcentral",
+    "99-minutos",
+    "aeb",
+    "affinda",
+    "aftership",
+    "airspace-technologies",
+    "alphaloops",
+    "amcs-group",
+    "amerco",
+    "augment",
+    "australia-post",
+    "automated-sorting-systems",
+    "automile",
+    "axlehire",
+    "back-market",
+    "barogo",
+    "bear-robotics",
+    "blue-yonder",
+    "bnsf",
+    "boxc",
+    "bringg",
+    "bureau-of-transportation-statistics",
+    "byrd",
+    "cabify",
+    "cargoai",
+    "cargomatic",
+    "cargosmart",
+    "cargoson",
+    "cart-com",
+    "cedarai",
+    "ch-robinson-worldwide",
+    "circuit",
+    "cloudprinter",
+    "convelio",
+    "coyote",
+    "crowdin",
+    "curbwaste",
+    "dat-freight",
+    "db-schenker",
+    "delivery-hero",
+    "denim",
+    "descartes",
+    "dexterity",
+    "doordash",
+    "dot",
+    "dpd-group",
+    "dsv",
+    "e2open",
+    "easypost",
+    "easyship",
+    "echo-global",
+    "edi-214",
+    "einride",
+    "emerge",
+    "evergreen-marine",
+    "extensiv",
+    "finditparts",
+    "fleetbase",
+    "fleetsu",
+    "frayt",
+    "geniemode",
+    "getcircuit-com",
+    "getir",
+    "gls-group",
+    "gopuff",
+    "got-its",
+    "green-screens-ai",
+    "grubhub",
+    "gs1",
+    "happyrobot",
+    "hivemapper",
+    "hmm21",
+    "hubble-network",
+    "hypertrack",
+    "icontainers",
+    "instacart",
+    "instock",
+    "jb-hunt-transport-services",
+    "just-eat",
+    "kardinal",
+    "kargo",
+    "kargo-ai",
+    "karrio",
+    "komerce",
+    "kuehne-nagel",
+    "kurly",
+    "la-poste-groupe",
+    "leaflink",
+    "leo",
+    "loadoptimizer-ai",
+    "loadsmart",
+    "loconav",
+    "locus-sh",
+    "loggi",
+    "logiless",
+    "lokalise",
+    "loop",
+    "loqate",
+    "lufthansa-cargo",
+    "lyft",
+    "maersk-line",
+    "magaya",
+    "manhattan-associates",
+    "maven-machines",
+    "metrobi",
+    "mile",
+    "mvmnt",
+    "mycarrier",
+    "nabis",
+    "nash",
+    "navis",
+    "nmfta",
+    "norfolk-southern",
+    "old-dominion-freight-line",
+    "omniful-inc",
+    "onerail",
+    "openrouteservice",
+    "opereit",
+    "opply",
+    "optilogic",
+    "oracle-transportation-management",
+    "orderful",
+    "ordoro",
+    "oto-global",
+    "paack",
+    "packagex",
+    "parade",
+    "parcelperform",
+    "parcelsapp",
+    "passport",
+    "picker",
+    "port-community-systems",
+    "portbase",
+    "portcast",
+    "postalcodes-info",
+    "postfinder-io",
+    "primis",
+    "procuros",
+    "project44",
+    "qargo",
+    "revvo",
+    "roadsync",
+    "rose-rocket",
+    "routific",
+    "royal-mail",
+    "rtx",
+    "runbuggy",
+    "ryder-system",
+    "samsara",
+    "sedna",
+    "sendcloud",
+    "sendle",
+    "ship24",
+    "shipbob",
+    "shipcloud",
+    "shipday",
+    "shipmonk",
+    "shippeo",
+    "shippingeasy",
+    "shippit",
+    "shippo",
+    "shipstation",
+    "shipsy",
+    "skydropx",
+    "smartling",
+    "smklog-com",
+    "sojo-industries",
+    "takealot",
+    "terminal49",
+    "tive",
+    "trabex",
+    "trackingmore",
+    "tradeverifyd",
+    "transload",
+    "travelcenters-of-america",
+    "treadio",
+    "turvo",
+    "uber",
+    "uber-direct",
+    "uniuni",
+    "ups",
+    "vayana-network",
+    "veho",
+    "vesselfinder",
+    "vizion",
+    "vooma",
+    "whiplash",
+    "whiplash-merchandising",
+    "wholechain",
+    "wm",
+    "wonderment",
+    "workwave",
+    "xeneta"
+   ],
+   "kebab-case": [
+    "99-minutos",
+    "aeb",
+    "aftership",
+    "alphaloops",
+    "amcs-group",
+    "augment",
+    "australia-post",
+    "automile",
+    "axlehire",
+    "back-market",
+    "barogo",
+    "bear-robotics",
+    "bnsf",
+    "boxc",
+    "bringg",
+    "byrd",
+    "cargomatic",
+    "cargosmart",
+    "cedarai",
+    "ch-robinson-worldwide",
+    "curbwaste",
+    "db-schenker",
+    "delivery-hero",
+    "denim",
+    "descartes",
+    "dexterity",
+    "doordash",
+    "dpd-group",
+    "e2open",
+    "edi-214",
+    "evergreen-marine",
+    "fleetbase",
+    "fleetsu",
+    "geniemode",
+    "getir",
+    "got-its",
+    "green-screens-ai",
+    "grubhub",
+    "happyrobot",
+    "hivemapper",
+    "hmm21",
+    "hubble-network",
+    "hypertrack",
+    "just-eat",
+    "komerce",
+    "kuehne-nagel",
+    "kurly",
+    "la-poste-groupe",
+    "leaflink",
+    "loadoptimizer-ai",
+    "loadsmart",
+    "locus-sh",
+    "loggi",
+    "lokalise",
+    "loop",
+    "maersk-line",
+    "magaya",
+    "maven-machines",
+    "mile",
+    "mvmnt",
+    "mycarrier",
+    "nabis",
+    "nash",
+    "navis",
+    "nmfta",
+    "omniful-inc",
+    "onerail",
+    "opereit",
+    "opply",
+    "optilogic",
+    "oracle-transportation-management",
+    "orderful",
+    "oto-global",
+    "parade",
+    "parcelsapp",
+    "passport",
+    "picker",
+    "port-community-systems",
+    "portbase",
+    "portcast",
+    "postalcodes-info",
+    "postex",
+    "primis",
+    "procuros",
+    "project44",
+    "qargo",
+    "revvo",
+    "roadsync",
+    "routific",
+    "rtx",
+    "runbuggy",
+    "ryder-system",
+    "samsara",
+    "sedna",
+    "sendcloud",
+    "ship24",
+    "shipbob",
+    "shipday",
+    "shipmonk",
+    "shippeo",
+    "shippit",
+    "skydropx",
+    "smartling",
+    "smklog-com",
+    "sojo-industries",
+    "tradeverifyd",
+    "transload",
+    "travelcenters-of-america",
+    "uber",
+    "vayana-network",
+    "veho",
+    "vooma",
+    "wm",
+    "xeneta"
+   ],
+   "snake_case": [
+    "affinda",
+    "airmee",
+    "airspace-technologies",
+    "axlehire",
+    "back-market",
+    "bringg",
+    "byrd",
+    "cabify",
+    "cargoson",
+    "cart-com",
+    "delivery-hero",
+    "doordash",
+    "emerge",
+    "finditparts",
+    "geniemode",
+    "hubble-network",
+    "hypertrack",
+    "instacart",
+    "kargo",
+    "kargo-ai",
+    "la-poste-groupe",
+    "leaflink",
+    "loadsmart",
+    "loconav",
+    "logiless",
+    "metrobi",
+    "nash",
+    "omniful-inc",
+    "opply",
+    "ordoro",
+    "portcast",
+    "qargo",
+    "rose-rocket",
+    "samsara",
+    "sendcloud",
+    "shipcloud",
+    "shippo",
+    "skydropx",
+    "takealot",
+    "terminal49",
+    "tradeverifyd",
+    "treadio",
+    "uber",
+    "uber-direct",
+    "whiplash",
+    "whiplash-merchandising"
+   ],
+   "camelCase": [
+    "aeb",
+    "amcs-group",
+    "amerco",
+    "automile",
+    "bnsf",
+    "cargoson",
+    "ch-robinson-worldwide",
+    "circuit",
+    "colissimo",
+    "delivery-hero",
+    "doordash",
+    "dot",
+    "dsv",
+    "evergreen-marine",
+    "extensiv",
+    "fleetsu",
+    "geniemode",
+    "getcircuit-com",
+    "grubhub",
+    "gs1",
+    "hubble-network",
+    "icontainers",
+    "just-eat",
+    "maven-machines",
+    "mycarrier",
+    "onerail",
+    "optilogic",
+    "oto-global",
+    "picker",
+    "portbase",
+    "rose-rocket",
+    "runbuggy",
+    "sedna",
+    "smartling",
+    "tive",
+    "turvo",
+    "uniuni",
+    "vayana-network",
+    "veho",
+    "vooma"
+   ],
+   "other": [
+    "airspace-technologies",
+    "amcs-group",
+    "australia-post",
+    "bnsf",
+    "bureau-of-transportation-statistics",
+    "ch-robinson-worldwide",
+    "circuit",
+    "descartes",
+    "doordash",
+    "echo-global",
+    "edi-214",
+    "einride",
+    "fleetsu",
+    "geniemode",
+    "getcircuit-com",
+    "la-poste-groupe",
+    "loadsmart",
+    "nabis",
+    "omniful-inc",
+    "opply",
+    "portbase",
+    "postalcodes-info",
+    "qargo",
+    "sap-s4hana",
+    "sedna",
+    "shipbob",
+    "smartling",
+    "track-pod",
+    "tradeverifyd",
+    "transload",
+    "ups",
+    "vayana-network",
+    "wonderment"
+   ],
+   "PascalCase": [
+    "3plcentral",
+    "aeb",
+    "amcs-group",
+    "asendia",
+    "automile",
+    "bureau-of-transportation-statistics",
+    "ch-robinson-worldwide",
+    "chaldal",
+    "colissimo",
+    "coyote",
+    "db-schenker",
+    "descartes",
+    "dsv",
+    "echo-global",
+    "extensiv",
+    "geniemode",
+    "gls-group",
+    "mycarrier",
+    "samsara",
+    "shipfinder-ais-data-api",
+    "track-pod",
+    "ups",
+    "wholechain"
+   ]
+  },
+  "query_param": {
+   "lower": [
+    "3plcentral",
+    "99-minutos",
+    "aeb",
+    "affinda",
+    "aftership",
+    "airmee",
+    "airspace-technologies",
+    "alphaloops",
+    "amcs-group",
+    "asendia",
+    "australia-post",
+    "automated-sorting-systems",
+    "automile",
+    "axlehire",
+    "back-market",
+    "barogo",
+    "blue-yonder",
+    "bnsf",
+    "boxc",
+    "bureau-of-transportation-statistics",
+    "byrd",
+    "cabify",
+    "cargoai",
+    "cargomatic",
+    "cargosmart",
+    "cart-com",
+    "cedarai",
+    "ch-robinson-worldwide",
+    "chaldal",
+    "circuit",
+    "convelio",
+    "coyote",
+    "crowdin",
+    "curbwaste",
+    "db-schenker",
+    "denim",
+    "dexterity",
+    "doordash",
+    "dot",
+    "dpd-group",
+    "dsv",
+    "e2open",
+    "easyship",
+    "edi-214",
+    "einride",
+    "evergreen-marine",
+    "extensiv",
+    "finditparts",
+    "fleetbase",
+    "geniemode",
+    "getcircuit-com",
+    "getir",
+    "got-its",
+    "green-screens-ai",
+    "grubhub",
+    "gs1",
+    "happyrobot",
+    "hivemapper",
+    "hubble-network",
+    "hypertrack",
+    "icontainers",
+    "jb-hunt-transport-services",
+    "just-eat",
+    "kardinal",
+    "kargo",
+    "kargo-ai",
+    "karrio",
+    "komerce",
+    "kuehne-nagel",
+    "la-poste-groupe",
+    "leaflink",
+    "loadoptimizer-ai",
+    "loadsmart",
+    "locus-sh",
+    "loggi",
+    "logiless",
+    "lokalise",
+    "loop",
+    "loqate",
+    "lufthansa-cargo",
+    "lyft",
+    "maersk-line",
+    "magaya",
+    "manhattan-associates",
+    "maven-machines",
+    "mile",
+    "mvmnt",
+    "mycarrier",
+    "nabis",
+    "nash",
+    "navis",
+    "nmfta",
+    "onerail",
+    "openrouteservice",
+    "opereit",
+    "opply",
+    "optilogic",
+    "oracle-transportation-management",
+    "orderful",
+    "ordoro",
+    "oto-global",
+    "packagex",
+    "parade",
+    "parcelperform",
+    "parcelsapp",
+    "picker",
+    "port-community-systems",
+    "portbase",
+    "postalcodes-info",
+    "postfinder-io",
+    "primis",
+    "procuros",
+    "project44",
+    "qargo",
+    "revvo",
+    "roadsync",
+    "rose-rocket",
+    "runbuggy",
+    "ryder-system",
+    "samsara",
+    "sedna",
+    "sendcloud",
+    "ship24",
+    "shipbob",
+    "shipcloud",
+    "shipfinder-ais-data-api",
+    "shipmonk",
+    "shippeo",
+    "shippingeasy",
+    "shippo",
+    "shipstation",
+    "skydropx",
+    "smartling",
+    "smklog-com",
+    "sojo-industries",
+    "takealot",
+    "trabex",
+    "track-pod",
+    "trackingmore",
+    "tradeverifyd",
+    "transload",
+    "travelcenters-of-america",
+    "treadio",
+    "turvo",
+    "uber",
+    "uber-direct",
+    "uniuni",
+    "ups",
+    "vayana-network",
+    "veho",
+    "vesselfinder",
+    "vizion",
+    "whiplash",
+    "whiplash-merchandising",
+    "wholechain",
+    "wonderment",
+    "xeneta"
+   ],
+   "camelCase": [
+    "99-minutos",
+    "aeb",
+    "amcs-group",
+    "asendia",
+    "augment",
+    "australia-post",
+    "automile",
+    "axlehire",
+    "back-market",
+    "barogo",
+    "blue-yonder",
+    "bnsf",
+    "bureau-of-transportation-statistics",
+    "byrd",
+    "cargoai",
+    "cargomatic",
+    "cargosmart",
+    "cedarai",
+    "ch-robinson-worldwide",
+    "chaldal",
+    "circuit",
+    "coyote",
+    "crowdin",
+    "curbwaste",
+    "db-schenker",
+    "doordash",
+    "dot",
+    "dpd-group",
+    "dsv",
+    "e2open",
+    "edi-214",
+    "einride",
+    "evergreen-marine",
+    "extensiv",
+    "geniemode",
+    "getcircuit-com",
+    "getir",
+    "got-its",
+    "green-screens-ai",
+    "grubhub",
+    "gs1",
+    "happyrobot",
+    "hivemapper",
+    "hmm21",
+    "icontainers",
+    "jb-hunt-transport-services",
+    "just-eat",
+    "kardinal",
+    "kuehne-nagel",
+    "la-poste-groupe",
+    "loadoptimizer-ai",
+    "loadsmart",
+    "locus-sh",
+    "loop",
+    "lufthansa-cargo",
+    "maersk-line",
+    "magaya",
+    "manhattan-associates",
+    "maven-machines",
+    "metrobi",
+    "mile",
+    "mvmnt",
+    "mycarrier",
+    "nabis",
+    "nash",
+    "navis",
+    "nmfta",
+    "norfolk-southern",
+    "old-dominion-freight-line",
+    "onerail",
+    "opply",
+    "optilogic",
+    "oracle-transportation-management",
+    "orderful",
+    "oto-global",
+    "parcelsapp",
+    "passport",
+    "picker",
+    "port-community-systems",
+    "portbase",
+    "primis",
+    "project44",
+    "revvo",
+    "roadsync",
+    "rose-rocket",
+    "royal-mail",
+    "ryder-system",
+    "samsara",
+    "sedna",
+    "ship24",
+    "shipmonk",
+    "shippeo",
+    "shipstation",
+    "smartling",
+    "tive",
+    "trabex",
+    "track-pod",
+    "transload",
+    "turvo",
+    "uniuni",
+    "ups",
+    "vayana-network",
+    "veho",
+    "wholechain",
+    "wm"
+   ],
+   "snake_case": [
+    "99-minutos",
+    "aeb",
+    "affinda",
+    "aftership",
+    "airmee",
+    "airspace-technologies",
+    "alphaloops",
+    "asendia",
+    "australia-post",
+    "automile",
+    "axlehire",
+    "back-market",
+    "boxc",
+    "byrd",
+    "cabify",
+    "cargomatic",
+    "cart-com",
+    "cedarai",
+    "denim",
+    "dexterity",
+    "doordash",
+    "easypost",
+    "easyship",
+    "emerge",
+    "finditparts",
+    "grubhub",
+    "happyrobot",
+    "hivemapper",
+    "hubble-network",
+    "hypertrack",
+    "instock",
+    "kargo",
+    "kargo-ai",
+    "karrio",
+    "komerce",
+    "kuehne-nagel",
+    "la-poste-groupe",
+    "leaflink",
+    "loadsmart",
+    "loggi",
+    "logiless",
+    "lokalise",
+    "lyft",
+    "mile",
+    "nash",
+    "openrouteservice",
+    "opereit",
+    "opply",
+    "ordoro",
+    "parade",
+    "parcelperform",
+    "picker",
+    "portcast",
+    "procuros",
+    "qargo",
+    "roadsync",
+    "samsara",
+    "sendcloud",
+    "shipcloud",
+    "shipfinder-ais-data-api",
+    "shipmonk",
+    "shippo",
+    "smklog-com",
+    "takealot",
+    "trackingmore",
+    "tradeverifyd",
+    "travelcenters-of-america",
+    "treadio",
+    "uber",
+    "vesselfinder",
+    "vizion",
+    "whiplash-merchandising",
+    "wholechain",
+    "wm",
+    "wonderment",
+    "xeneta"
+   ],
+   "other": [
+    "aftership",
+    "airspace-technologies",
+    "australia-post",
+    "automated-sorting-systems",
+    "barogo",
+    "boxc",
+    "bureau-of-transportation-statistics",
+    "cart-com",
+    "dpd-group",
+    "emerge",
+    "evergreen-marine",
+    "geniemode",
+    "gs1",
+    "leaflink",
+    "mile",
+    "openrouteservice",
+    "opply",
+    "parade",
+    "picker",
+    "portcast",
+    "procuros",
+    "qargo",
+    "sap-s4hana",
+    "sedna",
+    "smartling",
+    "terminal49",
+    "treadio",
+    "vayana-network",
+    "wholechain"
+   ],
+   "PascalCase": [
+    "amcs-group",
+    "amerco",
+    "automile",
+    "ch-robinson-worldwide",
+    "dpd-group",
+    "evergreen-marine",
+    "maersk-line",
+    "nmfta",
+    "picker",
+    "shipbob",
+    "vesselfinder",
+    "wholechain"
+   ],
+   "kebab-case": [
+    "automated-sorting-systems",
+    "back-market",
+    "cargoai",
+    "geniemode",
+    "gls-group",
+    "la-poste-groupe",
+    "maven-machines"
+   ]
+  },
+  "path_param": {
+   "lower": [
+    "99-minutos",
+    "aeb",
+    "affinda",
+    "aftership",
+    "alphaloops",
+    "amcs-group",
+    "amerco",
+    "australia-post",
+    "automated-sorting-systems",
+    "automile",
+    "axlehire",
+    "back-market",
+    "bnsf",
+    "boxc",
+    "cabify",
+    "cargoson",
+    "cart-com",
+    "cedarai",
+    "coyote",
+    "curbwaste",
+    "denim",
+    "doordash",
+    "dot",
+    "dsv",
+    "easypost",
+    "easyship",
+    "echo-global",
+    "einride",
+    "emerge",
+    "fleetbase",
+    "fleetsu",
+    "frayt",
+    "geniemode",
+    "getcircuit-com",
+    "green-screens-ai",
+    "gs1",
+    "happyrobot",
+    "hivemapper",
+    "hmm21",
+    "icontainers",
+    "just-eat",
+    "karrio",
+    "kuehne-nagel",
+    "kurly",
+    "la-poste-groupe",
+    "leaflink",
+    "loadoptimizer-ai",
+    "loadsmart",
+    "logiless",
+    "loop",
+    "loqate",
+    "lyft",
+    "magaya",
+    "maven-machines",
+    "mvmnt",
+    "mycarrier",
+    "nabis",
+    "nash",
+    "nmfta",
+    "omniful-inc",
+    "onerail",
+    "openrouteservice",
+    "opply",
+    "optilogic",
+    "oracle-transportation-management",
+    "orderful",
+    "ordoro",
+    "packagex",
+    "passport",
+    "picker",
+    "portbase",
+    "postalcodes-info",
+    "postfinder-io",
+    "primis",
+    "qargo",
+    "revvo",
+    "roadsync",
+    "runbuggy",
+    "samsara",
+    "sedna",
+    "sendcloud",
+    "shipbob",
+    "shipcloud",
+    "shippeo",
+    "shippingeasy",
+    "skydropx",
+    "smartling",
+    "takealot",
+    "terminal49",
+    "track-pod",
+    "trackingmore",
+    "tradeverifyd",
+    "transload",
+    "travelcenters-of-america",
+    "treadio",
+    "turvo",
+    "uniuni",
+    "ups",
+    "vayana-network",
+    "veho",
+    "vesselfinder",
+    "whiplash",
+    "whiplash-merchandising",
+    "wonderment",
+    "workwave"
+   ],
+   "camelCase": [
+    "3plcentral",
+    "aeb",
+    "amcs-group",
+    "augment",
+    "australia-post",
+    "automile",
+    "back-market",
+    "barogo",
+    "blue-yonder",
+    "bnsf",
+    "boxc",
+    "bureau-of-transportation-statistics",
+    "cargoai",
+    "cargomatic",
+    "cargosmart",
+    "ch-robinson-worldwide",
+    "circuit",
+    "convelio",
+    "coyote",
+    "crowdin",
+    "dat-freight",
+    "db-schenker",
+    "descartes",
+    "doordash",
+    "dpd-group",
+    "dsv",
+    "e2open",
+    "edi-214",
+    "evergreen-marine",
+    "extensiv",
+    "fleetbase",
+    "fleetsu",
+    "geniemode",
+    "getcircuit-com",
+    "getir",
+    "got-its",
+    "green-screens-ai",
+    "grubhub",
+    "gs1",
+    "happyrobot",
+    "hmm21",
+    "icontainers",
+    "jb-hunt-transport-services",
+    "just-eat",
+    "kardinal",
+    "kuehne-nagel",
+    "kurly",
+    "la-poste-groupe",
+    "leo",
+    "loadoptimizer-ai",
+    "loadsmart",
+    "loconav",
+    "locus-sh",
+    "loop",
+    "maersk-line",
+    "manhattan-associates",
+    "maven-machines",
+    "mvmnt",
+    "mycarrier",
+    "nabis",
+    "nash",
+    "navis",
+    "nmfta",
+    "old-dominion-freight-line",
+    "onerail",
+    "optilogic",
+    "orderful",
+    "ordoro",
+    "oto-global",
+    "port-community-systems",
+    "portbase",
+    "postex",
+    "postfinder-io",
+    "primis",
+    "procuros",
+    "project44",
+    "revvo",
+    "roadsync",
+    "rose-rocket",
+    "royal-mail",
+    "runbuggy",
+    "ryder-system",
+    "samsara",
+    "ship24",
+    "shipbob",
+    "shipday",
+    "shipstation",
+    "smartling",
+    "tive",
+    "trabex",
+    "track-pod",
+    "transload",
+    "uniuni",
+    "ups",
+    "vayana-network",
+    "vesselfinder",
+    "vooma",
+    "wholechain",
+    "wm",
+    "wonderment",
+    "workwave"
+   ],
+   "snake_case": [
+    "99-minutos",
+    "affinda",
+    "aftership",
+    "airspace-technologies",
+    "alphaloops",
+    "australia-post",
+    "axlehire",
+    "back-market",
+    "byrd",
+    "cabify",
+    "delivery-hero",
+    "denim",
+    "dexterity",
+    "doordash",
+    "emerge",
+    "finditparts",
+    "frayt",
+    "gopuff",
+    "grubhub",
+    "happyrobot",
+    "hubble-network",
+    "hypertrack",
+    "instacart",
+    "instock",
+    "karrio",
+    "komerce",
+    "kuehne-nagel",
+    "la-poste-groupe",
+    "leaflink",
+    "loadsmart",
+    "loconav",
+    "loggi",
+    "logiless",
+    "lokalise",
+    "metrobi",
+    "nash",
+    "omniful-inc",
+    "opereit",
+    "opply",
+    "ordoro",
+    "parade",
+    "parcelperform",
+    "portcast",
+    "qargo",
+    "roadsync",
+    "routific",
+    "samsara",
+    "sendcloud",
+    "shipcloud",
+    "shippingeasy",
+    "shippit",
+    "skydropx",
+    "smklog-com",
+    "sojo-industries",
+    "takealot",
+    "tradeverifyd",
+    "uber",
+    "uber-direct",
+    "vizion",
+    "whiplash",
+    "whiplash-merchandising"
+   ],
+   "other": [
+    "dsv",
+    "einride",
+    "lokalise",
+    "opply",
+    "picker",
+    "veho"
+   ],
+   "PascalCase": [
+    "descartes",
+    "echo-global",
+    "lufthansa-cargo",
+    "shippo"
+   ],
+   "kebab-case": [
+    "aeb",
+    "treadio",
+    "vayana-network"
+   ]
+  },
+  "pagination_param": {
+   "limit": [
+    "99-minutos",
+    "aeb",
+    "affinda",
+    "aftership",
+    "airmee",
+    "alphaloops",
+    "australia-post",
+    "barogo",
+    "bnsf",
+    "boxc",
+    "bureau-of-transportation-statistics",
+    "cargosmart",
+    "crowdin",
+    "curbwaste",
+    "doordash",
+    "e2open",
+    "evergreen-marine",
+    "fleetbase",
+    "geniemode",
+    "got-its",
+    "happyrobot",
+    "hubble-network",
+    "hypertrack",
+    "just-eat",
+    "kargo",
+    "kargo-ai",
+    "komerce",
+    "kuehne-nagel",
+    "leaflink",
+    "loadoptimizer-ai",
+    "loadsmart",
+    "logiless",
+    "lokalise",
+    "loqate",
+    "lyft",
+    "maersk-line",
+    "magaya",
+    "manhattan-associates",
+    "maven-machines",
+    "nabis",
+    "nash",
+    "navis",
+    "onerail",
+    "opereit",
+    "opply",
+    "optilogic",
+    "oracle-transportation-management",
+    "orderful",
+    "ordoro",
+    "packagex",
+    "parade",
+    "picker",
+    "port-community-systems",
+    "postfinder-io",
+    "primis",
+    "project44",
+    "roadsync",
+    "rose-rocket",
+    "runbuggy",
+    "samsara",
+    "sedna",
+    "sendcloud",
+    "ship24",
+    "shipbob",
+    "shipcloud",
+    "smartling",
+    "sojo-industries",
+    "trackingmore",
+    "tradeverifyd",
+    "transload",
+    "travelcenters-of-america",
+    "uber",
+    "uber-direct",
+    "vesselfinder",
+    "whiplash",
+    "wonderment"
+   ],
+   "page": [
+    "99-minutos",
+    "aftership",
+    "airspace-technologies",
+    "alphaloops",
+    "amcs-group",
+    "automile",
+    "back-market",
+    "blue-yonder",
+    "bnsf",
+    "byrd",
+    "cabify",
+    "cargomatic",
+    "coyote",
+    "curbwaste",
+    "denim",
+    "easyship",
+    "finditparts",
+    "geniemode",
+    "getir",
+    "green-screens-ai",
+    "grubhub",
+    "happyrobot",
+    "kardinal",
+    "komerce",
+    "la-poste-groupe",
+    "leaflink",
+    "loadsmart",
+    "logiless",
+    "lokalise",
+    "maven-machines",
+    "nabis",
+    "nash",
+    "nmfta",
+    "onerail",
+    "opply",
+    "oto-global",
+    "packagex",
+    "parade",
+    "parcelperform",
+    "picker",
+    "primis",
+    "project44",
+    "runbuggy",
+    "ryder-system",
+    "sedna",
+    "ship24",
+    "shipbob",
+    "shipcloud",
+    "shipmonk",
+    "shippeo",
+    "shippo",
+    "shipstation",
+    "skydropx",
+    "sojo-industries",
+    "trabex",
+    "trackingmore",
+    "tradeverifyd",
+    "vizion",
+    "whiplash",
+    "whiplash-merchandising"
+   ],
+   "offset": [
+    "aeb",
+    "affinda",
+    "alphaloops",
+    "australia-post",
+    "barogo",
+    "bureau-of-transportation-statistics",
+    "crowdin",
+    "dot",
+    "e2open",
+    "fleetbase",
+    "happyrobot",
+    "just-eat",
+    "kargo",
+    "kargo-ai",
+    "komerce",
+    "kuehne-nagel",
+    "leaflink",
+    "loadsmart",
+    "lyft",
+    "magaya",
+    "manhattan-associates",
+    "maven-machines",
+    "nash",
+    "navis",
+    "onerail",
+    "opply",
+    "oracle-transportation-management",
+    "ordoro",
+    "port-community-systems",
+    "postfinder-io",
+    "roadsync",
+    "rose-rocket",
+    "smartling",
+    "tradeverifyd",
+    "transload",
+    "uber",
+    "uber-direct"
+   ],
+   "page_size": [
+    "99-minutos",
+    "back-market",
+    "blue-yonder",
+    "cedarai",
+    "chaldal",
+    "coyote",
+    "easypost",
+    "edi-214",
+    "einride",
+    "getir",
+    "happyrobot",
+    "hubble-network",
+    "instock",
+    "kuehne-nagel",
+    "leaflink",
+    "mvmnt",
+    "nash",
+    "nmfta",
+    "opply",
+    "parcelperform",
+    "project44",
+    "royal-mail",
+    "ryder-system",
+    "sendcloud",
+    "shipbob",
+    "shipmonk",
+    "shippeo",
+    "shipstation",
+    "takealot",
+    "terminal49",
+    "trabex",
+    "tradeverifyd",
+    "turvo",
+    "wholechain"
+   ],
+   "cursor": [
+    "alphaloops",
+    "amcs-group",
+    "back-market",
+    "evergreen-marine",
+    "happyrobot",
+    "kuehne-nagel",
+    "loadoptimizer-ai",
+    "lokalise",
+    "maven-machines",
+    "mvmnt",
+    "nash",
+    "opereit",
+    "opply",
+    "procuros",
+    "qargo",
+    "sendcloud",
+    "shipbob",
+    "shipmonk",
+    "transload"
+   ],
+   "per_page": [
+    "byrd",
+    "cargomatic",
+    "denim",
+    "easyship",
+    "green-screens-ai",
+    "gs1",
+    "oto-global",
+    "procuros",
+    "shipcloud",
+    "tradeverifyd",
+    "vizion",
+    "whiplash-merchandising",
+    "wholechain"
+   ],
+   "size": [
+    "99-minutos",
+    "australia-post",
+    "dot",
+    "geniemode",
+    "grubhub",
+    "la-poste-groupe",
+    "nash",
+    "openrouteservice",
+    "ordoro",
+    "runbuggy",
+    "sendcloud",
+    "tradeverifyd"
+   ],
+   "start": [
+    "affinda",
+    "geniemode",
+    "grubhub",
+    "happyrobot",
+    "hubble-network",
+    "loadsmart",
+    "openrouteservice",
+    "turvo"
+   ],
+   "page_token": [
+    "boxc",
+    "cedarai",
+    "circuit",
+    "edi-214",
+    "einride",
+    "getcircuit-com",
+    "happyrobot"
+   ],
+   "skip": [
+    "automile",
+    "ch-robinson-worldwide",
+    "einride",
+    "mycarrier",
+    "picker",
+    "sap-s4hana"
+   ],
+   "count": [
+    "affinda",
+    "aftership",
+    "doordash",
+    "geniemode",
+    "just-eat"
+   ],
+   "after": [
+    "just-eat",
+    "la-poste-groupe",
+    "loop",
+    "nash",
+    "samsara"
+   ],
+   "max_results": [
+    "aeb",
+    "australia-post",
+    "automated-sorting-systems"
+   ],
+   "before": [
+    "la-poste-groupe",
+    "nash"
+   ],
+   "starting_after": [
+    "samsara"
+   ],
+   "top": [
+    "sap-s4hana"
+   ]
+  },
+  "property": {
+   "lower": [
+    "aeb",
+    "alphaloops",
+    "augment",
+    "coyote",
+    "green-screens-ai",
+    "karrio",
+    "loadsmart",
+    "mvmnt",
+    "onerail",
+    "oracle-transportation-management",
+    "parade",
+    "roadsync",
+    "ryder-system",
+    "sendcloud",
+    "shipcloud",
+    "shipday",
+    "shipstation",
+    "treadio",
+    "turvo",
+    "vooma"
+   ],
+   "camelCase": [
+    "aeb",
+    "augment",
+    "coyote",
+    "green-screens-ai",
+    "loadsmart",
+    "mvmnt",
+    "oracle-transportation-management",
+    "ryder-system",
+    "shipday",
+    "shipstation",
+    "turvo",
+    "vooma"
+   ],
+   "snake_case": [
+    "alphaloops",
+    "karrio",
+    "loadsmart",
+    "parade",
+    "roadsync",
+    "sendcloud",
+    "shipcloud",
+    "treadio"
+   ]
+  }
+ }
+}

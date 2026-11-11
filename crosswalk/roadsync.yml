@@ -1,0 +1,18 @@
+provider: roadsync
+apis_io: https://apis.io/providers/roadsync/
+context: freight
+generated: '2026-11-11'
+concepts:
+  load:
+    path_segment:
+    - loads
+    properties:
+      id:
+      - id
+      - external_id
+      status: status
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/roadsync-rspay-openapi.json#GET /loads
+    - openapi/_original/roadsync-rspay-openapi.json#GET /loads/{load_id}
+    - openapi/_original/roadsync-rspay-openapi.json#POST /loads

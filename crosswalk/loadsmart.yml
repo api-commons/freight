@@ -1,0 +1,35 @@
+provider: loadsmart
+apis_io: https://apis.io/providers/loadsmart/
+context: freight
+generated: '2026-11-11'
+concepts:
+  load:
+    path_segment:
+    - loads
+    properties:
+      commodity: commodity
+      id: id
+      weight: weight
+      equipment_type: equipment_type
+      stops: stops
+      carrier_id: carrier
+      distance: distance
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/loadsmart-shipperguide-openapi.yml#DELETE /api/v2/load-offers/loads/{load_id}
+    - openapi/_original/loadsmart-shipperguide-openapi.yml#GET /api/v2/load-offers/loads/
+    - openapi/_original/loadsmart-shipperguide-openapi.yml#GET /api/v2/load-offers/loads/{load_id}
+  freight_carrier:
+    path_segment:
+    - carrier
+    properties:
+      id: id
+      name: name
+      phone: phone
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/loadsmart-opendock-openapi.yml#GET /carrier
+    - openapi/_original/loadsmart-opendock-openapi.yml#GET /carrier/{id}
+    - openapi/_original/loadsmart-opendock-openapi.yml#GET /metrics/appointment-volume/carrier
+    - openapi/_original/loadsmart-opendock-openapi.yml#POST /carrier
+    - openapi/_original/loadsmart-shipperguide-openapi.yml#DELETE /api/v2/carrier/{driver_id}

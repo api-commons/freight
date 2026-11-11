@@ -1,0 +1,176 @@
+openapi: 3.1.0
+info:
+  title: Freight and TMS (API Commons)
+  version: 0.1.0-draft.20261111
+  description: 'The common Freight and TMS interface, distilled from the harvested OpenAPI of 205 providers in the
+    APIs.io catalog. Not a product: no one serves this API. It is the shape the market already shares, measured,
+    so that providers, agents and integrators can map to one vocabulary. See profile.yml.'
+  license:
+    name: CC BY-NC-SA 4.0
+    url: https://creativecommons.org/licenses/by-nc-sa/4.0/
+paths:
+  /loads:
+    post:
+      operationId: createLoad
+      summary: Create a load
+      tags:
+      - Loads
+      x-commons-tier: core
+      x-commons-share: 0.75
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: &id001
+                $ref: '#/components/schemas/Load'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id001
+    get:
+      operationId: listLoads
+      summary: List loads
+      tags:
+      - Loads
+      x-commons-tier: core
+      x-commons-share: 0.5
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: *id001
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+  /loads/{load_id}:
+    parameters:
+    - $ref: '#/components/parameters/load_id'
+    get:
+      operationId: getLoad
+      summary: Get a load
+      tags:
+      - Loads
+      x-commons-tier: core
+      x-commons-share: 0.583
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id001
+    delete:
+      operationId: deleteLoad
+      summary: Delete a load
+      tags:
+      - Loads
+      x-commons-tier: extended
+      x-commons-share: 0.333
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id001
+  /freight-carriers:
+    post:
+      operationId: createFreightCarrier
+      summary: Create a freight carrier
+      tags:
+      - Freight Carriers
+      x-commons-tier: core
+      x-commons-share: 0.8
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: &id002
+                $ref: '#/components/schemas/FreightCarrier'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id002
+    get:
+      operationId: listFreightCarriers
+      summary: List freight carriers
+      tags:
+      - Freight Carriers
+      x-commons-tier: core
+      x-commons-share: 0.6
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: *id002
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+  /freight-carriers/{freight_carrier_id}:
+    parameters:
+    - $ref: '#/components/parameters/freight_carrier_id'
+    delete:
+      operationId: deleteFreightCarrier
+      summary: Delete a freight carrier
+      tags:
+      - Freight Carriers
+      x-commons-tier: core
+      x-commons-share: 0.6
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id002
+    get:
+      operationId: getFreightCarrier
+      summary: Get a freight carrier
+      tags:
+      - Freight Carriers
+      x-commons-tier: core
+      x-commons-share: 0.6
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id002
+components:
+  schemas:
+    Load:
+      $ref: ./schema/load.json
+    FreightCarrier:
+      $ref: ./schema/freight_carrier.json
+  parameters:
+    load_id:
+      name: load_id
+      in: path
+      required: true
+      schema:
+        type: string
+    freight_carrier_id:
+      name: freight_carrier_id
+      in: path
+      required: true
+      schema:
+        type: string

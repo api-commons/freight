@@ -1,0 +1,23 @@
+provider: treadio
+apis_io: https://apis.io/providers/treadio/
+context: freight
+generated: '2026-11-11'
+concepts:
+  load:
+    path_segment:
+    - loads
+    properties:
+      id:
+      - id
+      - load_id
+      status: state
+      created_at: created_at
+      stops: waypoints
+      updated_at: updated_at
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/treadio-horizon-openapi.json#DELETE /v1/loads/{id}
+    - openapi/_original/treadio-horizon-openapi.json#GET /v1/companies/{company-id}/jobs/{job-id}/loads
+    - openapi/_original/treadio-horizon-openapi.json#GET /v1/companies/{company-id}/settlements/{settlement-id}/loads
+    - openapi/_original/treadio-horizon-openapi.json#GET /v1/jobs/{job-id}/loads
+    - openapi/_original/treadio-horizon-openapi.json#GET /v1/loads/{id}

@@ -1,0 +1,38 @@
+provider: augment
+apis_io: https://apis.io/providers/augment/
+context: freight
+generated: '2026-11-11'
+concepts:
+  load:
+    path_segment:
+    - loads
+    properties:
+      commodity: commodity
+      status: status
+      weight: weight
+      created_at: createdAt
+      equipment_type:
+      - mode
+      - equipment
+      updated_at: updatedAt
+      carrier_id: carrier
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/augment-openapi.json#GET /v2/loads
+    - openapi/_original/augment-openapi.json#PATCH /v2/loads
+    - openapi/_original/augment-openapi.json#POST /v2/loads
+  freight_carrier:
+    path_segment:
+    - carriers
+    properties:
+      email: email
+      id: id
+      name: name
+      phone: phone
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/augment-openapi.json#DELETE /v1/carriers/{carrierId}
+    - openapi/_original/augment-openapi.json#GET /v1/carriers
+    - openapi/_original/augment-openapi.json#GET /v1/carriers/{carrierId}
+    - openapi/_original/augment-openapi.json#POST /v1/carriers
+    - openapi/_original/augment-openapi.json#POST /v1/carriers/bulk

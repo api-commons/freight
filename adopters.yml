@@ -1,0 +1,68 @@
+context: freight
+generated: '2026-11-11'
+adopters:
+- provider: augment
+  apis_io: https://apis.io/providers/augment/
+  crosswalk: crosswalk/augment.yml
+  concepts:
+  - freight_carrier
+  - load
+- provider: cargomatic
+  apis_io: https://apis.io/providers/cargomatic/
+  crosswalk: crosswalk/cargomatic.yml
+  concepts:
+  - load
+- provider: coyote
+  apis_io: https://apis.io/providers/coyote/
+  crosswalk: crosswalk/coyote.yml
+  concepts:
+  - load
+- provider: descartes
+  apis_io: https://apis.io/providers/descartes/
+  crosswalk: crosswalk/descartes.yml
+  concepts:
+  - freight_carrier
+  - load
+- provider: green-screens-ai
+  apis_io: https://apis.io/providers/green-screens-ai/
+  crosswalk: crosswalk/green-screens-ai.yml
+  concepts:
+  - freight_carrier
+  - load
+- provider: loadsmart
+  apis_io: https://apis.io/providers/loadsmart/
+  crosswalk: crosswalk/loadsmart.yml
+  concepts:
+  - freight_carrier
+  - load
+- provider: mvmnt
+  apis_io: https://apis.io/providers/mvmnt/
+  crosswalk: crosswalk/mvmnt.yml
+  concepts:
+  - freight_carrier
+  - load
+- provider: omniful-inc
+  apis_io: https://apis.io/providers/omniful-inc/
+  crosswalk: crosswalk/omniful-inc.yml
+  concepts:
+  - load
+- provider: parade
+  apis_io: https://apis.io/providers/parade/
+  crosswalk: crosswalk/parade.yml
+  concepts:
+  - load
+- provider: roadsync
+  apis_io: https://apis.io/providers/roadsync/
+  crosswalk: crosswalk/roadsync.yml
+  concepts:
+  - load
+- provider: ryder-system
+  apis_io: https://apis.io/providers/ryder-system/
+  crosswalk: crosswalk/ryder-system.yml
+  concepts:
+  - load
+- provider: treadio
+  apis_io: https://apis.io/providers/treadio/
+  crosswalk: crosswalk/treadio.yml
+  concepts:
+  - load

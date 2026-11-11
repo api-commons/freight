@@ -1,0 +1,13 @@
+provider: omniful-inc
+apis_io: https://apis.io/providers/omniful-inc/
+context: freight
+generated: '2026-11-11'
+concepts:
+  load:
+    path_segment:
+    - shipments
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/omniful-inc-openapi.yml#GET /sales-channel/public/v2/tms/shipments/{shipment_id}
+    - openapi/_original/omniful-inc-openapi.yml#POST /sales-channel/public/v2/tms/shipments
