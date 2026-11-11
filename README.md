@@ -24,7 +24,7 @@ extended tier and the long tail of every concept are in [profile.yml](profile.ym
 ## What the measurement shows
 
 - A load agrees on its weight, commodity, status and id: what is moving and how heavy, not where -- origin, destination and dates are each nested differently (stops, pickup/delivery objects, addresses).
-- Freight publishes thinly as OpenAPI (205 providers in the cohort, 13 mapped). Brokers, TMS and load boards trade quotes and tenders over EDI and portals more than over published APIs.
+- Freight publishes thinly as OpenAPI: 205 providers in the cohort, 13 mapped.
 
 ## Artifacts
 
